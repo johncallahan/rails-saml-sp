@@ -22,6 +22,7 @@ provider (IdP).  Run the following commands to deploy locally
 % rails s
 ~~~~
 
+Visit [http://localhost:3000](http://localhost:3000/) in a browser.
 To deploy on heroku, try:
 
 ~~~~
