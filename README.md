@@ -1,15 +1,24 @@
-A simple SAML rails client.  You must have a postgres database engine
-available (spec'd in config/database.yml).  Clone this repo first,
-then run:
+A simple SAML rails client.  You must have Ruby-on-Rails 5+, a
+postgres database engine available (spec'd in config/database.yml).
+See [Shibboleth for Beginners-Part
+1](https://medium.com/@johnrcallahan/shibboleth-for-beginners-part-1-f8fb59b87fa2)
+for instructions on setting up a JumpCloud SAML (and LDAP) identity
+provider (IdP).  Run the following commands to deploy locally
+(development):
 
 ~~~~
-% rake db:create
-% rake db:migrate
+% git clone https://github.com/johncallahan/rails-saml-sp.git
+% cd rails-saml-sp
+% bundle install
 % export ASSET_HOST=http://localhost:3000
 % export ENTITY_ID=<SAML entity id name>
 % export IDP_SSO_URL=<SAML SSO url>
 % export IDP_SLO_URL=<SAML SLO url>
+% openssl genrsa -out idp.pem 2048
+% openssl req -new -x509 -sha256 -key idp.pem -out idp.crt -days 365
 % export IDP_CERT="$(cat idp.crt)"
+% rake db:create
+% rake db:migrate
 % rails s
 ~~~~
 
