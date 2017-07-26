@@ -10,12 +10,12 @@ provider (IdP).  Run the following commands to deploy locally
 % git clone https://github.com/johncallahan/rails-saml-sp.git
 % cd rails-saml-sp
 % bundle install
+% openssl genrsa -out idp.pem 2048
+% openssl req -new -x509 -sha256 -key idp.pem -out idp.crt -days 365
 % export ASSET_HOST=http://localhost:3000
 % export ENTITY_ID=<SAML entity id name>
 % export IDP_SSO_URL=<SAML SSO url>
 % export IDP_SLO_URL=<SAML SLO url>
-% openssl genrsa -out idp.pem 2048
-% openssl req -new -x509 -sha256 -key idp.pem -out idp.crt -days 365
 % export IDP_CERT="$(cat idp.crt)"
 % rake db:create
 % rake db:migrate
