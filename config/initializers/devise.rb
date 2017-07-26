@@ -310,9 +310,9 @@ Devise.setup do |config|
     settings.assertion_consumer_service_url     = ENV["ASSET_HOST"] + "/users/saml/auth"
     settings.name_identifier_format             = "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"
 #    settings.issuer                             = ENV["ASSET_HOST"] + "/saml/metadata"
-    settings.idp_entity_id                      = ENV["APP_NAME"]
-    settings.idp_sso_target_url                 = "https://sso.jumpcloud.com/saml2/" + ENV["APP_NAME"]
-    settings.idp_slo_target_url                 = "https://sso.jumpcloud.com/saml2/" + ENV["APP_NAME"]
+    settings.idp_entity_id                      = ENV["ENTITY_ID"]
+    settings.idp_sso_target_url                 = ENV["IDP_SSO_URL"]
+    settings.idp_slo_target_url                 = ENV["IDP_SLO_URL"]
     settings.idp_cert                           = ENV["IDP_CERT"]
 
     # Security section

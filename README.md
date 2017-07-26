@@ -6,7 +6,9 @@ then run:
 % rake db:create
 % rake db:migrate
 % export ASSET_HOST=http://localhost:3000
-% export APP_NAME=<SAML entity id name>
+% export ENTITY_ID=<SAML entity id name>
+% export IDP_SSO_URL=<SAML SSO url>
+% export IDP_SLO_URL=<SAML SLO url>
 % export IDP_CERT="$(cat idp.crt)"
 % rails s
 ~~~~
@@ -22,7 +24,9 @@ yours will be different):
 
 ~~~~
 % heroku config:set HEROKU_APP_NAME=little-goat-12345
-% heroku config:set APP_NAME=<SAML entity id name>
+% heroku config:set ENTITY_ID=<SAML entity id name>
+% heroku config:set IDP_SSO_URL=<SAML SSO url>
+% heroku config:set IDP_SLO_URL=<SAML SLO url>
 % heroku config:set IDP_CERT="$(cat idp.crt)"
 % git push heroku master
 % heroku run rake db:migrate
@@ -35,7 +39,9 @@ If you want to create additional sites:
 ~~~~
 % heroku create --remote other
 % heroku config:set HEROKU_APP_NAME=big-sheep-98765 --remote other
-% heroku config:set APP_NAME=<SAML entity id name> --remote other
+% heroku config:set ENTITY_ID=<SAML entity id name> --remote other
+% heroku config:set IDP_SSO_URL=<SAML SSO url> --remote other
+% heroku config:set IDP_SLO_URL=<SAML SLO url> --remote other
 % heroku config:set IDP_CERT="$(cat idp.crt)" --remote other
 % git push other master
 % heroku run rake db:migrate --remote other
