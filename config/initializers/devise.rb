@@ -309,7 +309,7 @@ Devise.setup do |config|
   config.saml_configure do |settings|
     settings.assertion_consumer_service_url     = ENV["ASSET_HOST"] + "/users/saml/auth"
     settings.name_identifier_format             = "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"
-#    settings.issuer                             = ENV["ASSET_HOST"] + "/saml/metadata"
+    settings.issuer                             = ENV["ASSET_HOST"] + "/saml/metadata"
     settings.idp_entity_id                      = ENV["ENTITY_ID"]
     settings.idp_sso_target_url                 = ENV["IDP_SSO_URL"]
     settings.idp_slo_target_url                 = ENV["IDP_SLO_URL"]
