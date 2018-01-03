@@ -310,7 +310,7 @@ Devise.setup do |config|
     settings.assertion_consumer_service_url     = ENV["ASSET_HOST"] + "/users/saml/auth"
     settings.name_identifier_format             = "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"
     settings.issuer                             = ENV["ENTITY_ID"]
-    settings.idp_entity_id                      = "localhost"
+    settings.idp_entity_id                      = ENV["SP_NAME"]
     settings.idp_sso_target_url                 = ENV["IDP_SSO_URL"]
     settings.idp_slo_target_url                 = ENV["IDP_SLO_URL"]
     settings.idp_cert                           = ENV["IDP_CERT"]
