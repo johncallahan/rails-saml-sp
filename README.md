@@ -59,7 +59,7 @@ If you want to create additional sites:
 
 Then, visit https:://big-sheep-98765.herokuapp.com/
 
-With rails-saml-idp project, 
+With [rails-saml-idp project](https://github.com/johncallahan/rails-saml-idp), 
 
 ~~~~
 export ASSET_HOST=http://localhost:3000
