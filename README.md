@@ -58,3 +58,15 @@ If you want to create additional sites:
 ~~~~
 
 Then, visit https:://big-sheep-98765.herokuapp.com/
+
+With rails-saml-idp project, 
+
+~~~~
+export ASSET_HOST=http://localhost:3000
+export ENTITY_ID=
+export SP_NAME=http://localhost:3001/saml/auth
+export IDP_CERT_FINGERPRINT="<fingerprint value SHA1>"
+export IDP_CERT=
+export IDP_SSO_URL=http://localhost:3001/saml/auth
+export IDP_SLO_URL=http://localhost:3001/saml/auth?slo=true
+~~~~

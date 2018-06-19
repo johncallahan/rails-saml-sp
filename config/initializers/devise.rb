@@ -314,6 +314,7 @@ Devise.setup do |config|
     settings.idp_sso_target_url                 = ENV["IDP_SSO_URL"]
     settings.idp_slo_target_url                 = ENV["IDP_SLO_URL"]
     settings.idp_cert                           = ENV["IDP_CERT"]
+    settings.idp_cert_fingerprint               = ENV["IDP_CERT_FINGERPRINT"]
 
     # Security section
     settings.soft = true
