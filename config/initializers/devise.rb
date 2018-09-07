@@ -291,7 +291,7 @@ Devise.setup do |config|
   #
   # CHECK THIS AGAINST SAML response
   #
-  config.saml_use_subject = false
+  config.saml_use_subject = true
 
   # You can support multiple IdPs by setting this value to a class that implements a #settings method which takes
   # an IdP entity id as an argument and returns a hash of idp settings for the corresponding IdP.
