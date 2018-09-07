@@ -70,3 +70,15 @@ export IDP_CERT=
 export IDP_SSO_URL=http://localhost:3001/saml/auth
 export IDP_SLO_URL=http://localhost:3001/saml/auth?slo=true
 ~~~~
+
+Similarly on Heroku (when running this SP on localhost):
+
+~~~~
+export ASSET_HOST=http://localhost:3000
+export ENTITY_ID=
+export SP_NAME=https://your_saml_idp.herokuapp.com/saml/auth
+export IDP_CERT_FINGERPRINT="<fingerprint value SHA1>"
+export IDP_CERT=
+export IDP_SSO_URL=http://your_saml_idp.herokuapp.com/saml/auth
+export IDP_SLO_URL=http://your_saml_idp.herokuapp.com/saml/auth?slo=true
+~~~~
