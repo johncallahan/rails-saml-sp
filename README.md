@@ -59,7 +59,9 @@ If you want to create additional sites:
 
 Then, visit https:://big-sheep-98765.herokuapp.com/
 
-With [rails-saml-idp project](https://github.com/johncallahan/rails-saml-idp), 
+To run this SP example on localhost (in conjunction with [rails-saml-idp
+project](https://github.com/johncallahan/rails-saml-idp)
+(edit config/initializers/devise.rb line: config.saml_use_subject = true)
 
 ~~~~
 export ASSET_HOST=http://localhost:3000
@@ -71,7 +73,8 @@ export IDP_SSO_URL=http://localhost:3001/saml/auth
 export IDP_SLO_URL=http://localhost:3001/saml/auth?slo=true
 ~~~~
 
-Similarly on Heroku (when running this SP on localhost):
+Similarly on Heroku (when running this SP on localhost still):
+(edit config/initializers/devise.rb line: config.saml_use_subject = false)
 
 ~~~~
 export ASSET_HOST=http://localhost:3000
@@ -79,6 +82,6 @@ export ENTITY_ID=
 export SP_NAME=https://your_saml_idp.herokuapp.com/saml/auth
 export IDP_CERT_FINGERPRINT="<fingerprint value SHA1>"
 export IDP_CERT=
-export IDP_SSO_URL=http://your_saml_idp.herokuapp.com/saml/auth
-export IDP_SLO_URL=http://your_saml_idp.herokuapp.com/saml/auth?slo=true
+export IDP_SSO_URL=https://your_saml_idp.herokuapp.com/saml/auth
+export IDP_SLO_URL=https://your_saml_idp.herokuapp.com/saml/auth?slo=true
 ~~~~
