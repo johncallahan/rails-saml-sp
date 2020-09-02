@@ -85,3 +85,9 @@ export IDP_CERT=
 export IDP_SSO_URL=https://your_saml_idp.herokuapp.com/saml/auth
 export IDP_SLO_URL=https://your_saml_idp.herokuapp.com/saml/auth?slo=true
 ~~~~
+
+The SP metadata is available at
+
+~~~~
+http://ramp01.herokuapp.com/users/saml/metadata.xml
+~~~~
